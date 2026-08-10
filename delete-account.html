@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Delete Your Tweak Account</title>
-<meta name="description" content="Request deletion of your Tweak account and associated data." />
+<title>Delete Your Duello Account</title>
+<meta name="description" content="Request deletion of your Duello account and associated data." />
 <style>
   /* ====================================================================
      EDIT ME — the only values you should need to touch before deploying.
      ==================================================================== */
   :root {
-    --brand-name: "Tweak";
+    --brand-name: "Duello";
   }
 
   :root {
@@ -364,12 +364,12 @@
         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
       </svg>
     </div>
-    <div class="brand-name">Tweak</div>
+    <div class="brand-name">Duello</div>
   </div>
 
-  <h1>Delete your <span>Tweak</span> account</h1>
+  <h1>Delete your <span>Duello</span> account</h1>
   <p class="lede">
-    You can permanently delete your Tweak account and the data tied to it from here —
+    You can permanently delete your Duello account and the data tied to it from here —
     you don't need the app installed. Requests are usually processed within
     <strong style="color: var(--text-hi);">30 days</strong>.
   </p>
@@ -419,7 +419,7 @@
       </div>
       <div class="ledger-row del">
         <div class="bullet"></div>
-        <div><b>Sign-in credentials</b> <span class="desc">— your Google account link is removed from Tweak; nothing changes on your Google account itself</span></div>
+        <div><b>Sign-in credentials</b> <span class="desc">— your Google account link is removed from Duello; nothing changes on your Google account itself</span></div>
       </div>
       <div class="ledger-divider">Retained for a limited time</div>
       <div class="ledger-row keep">
@@ -432,7 +432,7 @@
       </div>
     </div>
     <p class="fine-print">
-      This list describes Tweak's account deletion process in general terms.
+      This list describes Duello's account deletion process in general terms.
       <!-- EDIT ME: adjust the two sections above to exactly match what your
            backend actually does before publishing — see the assistant's
            reply for what to double-check. -->
@@ -443,7 +443,7 @@
     <h2>Playing as a guest?</h2>
     <div class="callout">
       <b>Guest accounts aren't tied to an email</b>, so we can't look one up from this
-      page. Open Tweak, go to <b>Settings → Delete Account</b> while still signed in
+      page. Open Duello, go to <b>Settings → Delete Account</b> while still signed in
       to that guest session — that removes it immediately. If you've already lost
       access to the session, contact us below with your device and the approximate
       date you played.
@@ -468,11 +468,11 @@
       <div class="field" id="field-email">
         <label for="email">Account email <span class="req">*</span></label>
         <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
-        <div class="field-error">Enter the email address you sign in to Tweak with.</div>
+        <div class="field-error">Enter the email address you sign in to Duello with.</div>
       </div>
 
       <div class="field">
-        <label for="username">Tweak username <span style="color: var(--text-lo); font-weight: 400;">(optional, helps us find you faster)</span></label>
+        <label for="username">Duello username <span style="color: var(--text-lo); font-weight: 400;">(optional, helps us find you faster)</span></label>
         <input type="text" id="username" name="username" placeholder="e.g. niraj" autocomplete="off" />
       </div>
 
@@ -496,7 +496,7 @@
       <div class="confirm-row">
         <input type="checkbox" id="confirm" name="confirm" required />
         <label for="confirm">
-          I understand this permanently deletes my Tweak account and cannot be undone.
+          I understand this permanently deletes my Duello account and cannot be undone.
         </label>
       </div>
 
@@ -509,11 +509,11 @@
   </section>
 
   <footer>
-    <span>© <span id="year"></span> Tweak</span>
+    <span>© <span id="year"></span> Duello</span>
     <span>
-      <a href="https://codeverse570.github.io/Tweak-legal/" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="https://codeverse570.github.io/Duello-legal/" target="_blank" rel="noopener">Privacy Policy</a>
       &nbsp;·&nbsp;
-      <a href="https://codeverse570.github.io/Tweak-legal/" target="_blank" rel="noopener">Terms</a>
+      <a href="https://codeverse570.github.io/Duello-legal/" target="_blank" rel="noopener">Terms</a>
     </span>
   </footer>
 </div>
@@ -563,14 +563,14 @@
   }
 
   function buildMailto() {
-    var subject = "Tweak account deletion request";
+    var subject = "Duello account deletion request";
     var lines = [
       "Account email: " + emailField.value.trim(),
       "Username: " + (usernameField.value.trim() || "(not provided)"),
       "Reason: " + (reasonField.options[reasonField.selectedIndex].text || "(not provided)"),
       "Details: " + (detailsField.value.trim() || "(none)"),
       "",
-      "I understand this permanently deletes my Tweak account and cannot be undone."
+      "I understand this permanently deletes my Duello account and cannot be undone."
     ];
     var body = lines.join("\n");
     return "mailto:" + SUPPORT_EMAIL +
